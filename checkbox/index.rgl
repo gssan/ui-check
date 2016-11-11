@@ -1,0 +1,3 @@
+<label class="u-check {@(class)}" z-sel={checked} z-dis={disabled} r-hide={!visible} on-click={this.check()}>
+    <div><i class="u-icon"></i>{name}</div>
+</label>

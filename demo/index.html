@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+    <link rel="stylesheet" href="https://regular-ui.github.io/ui-slider/css/index.css">
+    <link rel="stylesheet" href="https://regular-ui.github.io/ui-overlay/css/index.css">
+    <link rel="stylesheet" href="https://regular-ui.github.io/ui-calendar/css/index.css">
+    <style>
+
+        .u-icon {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #333;
+            padding: 2px;
+        }
+        .u-check.z-sel .u-icon:after {
+            content: ' ';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+        }
+        body {
+            padding: 50px;
+        }
+        .u-timepicker {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://raw.githack.com/es-shims/es5-shim/master/es5-shim.min.js"></script>
+    <script src="https://raw.githack.com/regularjs/regular/v0.5.2/dist/regular.js"></script>
+    <script src="./check.dev.js"></script>
+    <script>
+        var radios = [
+            {value: '1', name: '音乐', selected: true},
+            {value: '2', name: '图片'},
+            {value: '3', name: '百科'},
+            {value: '4', name: '教育'}
+        ];
+        var _template = '<checkbox name="孤单" /><checks multiple={true} on-select={this.select($event)}>{#list radios as radio}<check selected={radio.selected} value={radio.value}>{radio.name}</check>{/list}</checks>';
+
+        var App = Regular.extend({
+            template: _template
+        });
+
+        (new App({
+            data: {
+                radios: radios
+            },
+            select: function($event) {
+                console.log($event);
+
+                console.log(radios);
+            }
+        })).$inject(document.body);
+    </script>
+</body>
+</html>

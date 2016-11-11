@@ -1,0 +1,39 @@
+{
+  "name": "rgui-ui-check",
+  "version": "1.0.0",
+  "description": "Regular UI - Check",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YDFE/ui-check.git"
+  },
+  "keywords": [
+    "regular",
+    "ui",
+    "rgui",
+    "timepicker"
+  ],
+  "dependencies": {
+    "rgui-ui-base": "github:ydfe/ui-base#next",
+    "rgui-ui-listview": "github:ydfe/ui-listview#master"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.8.0",
+    "babel-plugin-transform-es3-property-literals": "^6.8.0",
+    "regularjs": "github:gssan/regular#master",
+    "rgl-loader": "^0.4.0",
+    "webpack": "^1.13.2"
+  },
+  "author": "gssan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YDFE/ui-check/issues"
+  },
+  "homepage": "https://github.com/YDFE/ui-check#readme"
+}
